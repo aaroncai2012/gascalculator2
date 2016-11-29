@@ -29,6 +29,6 @@ struct input {
 
 };
 
-}
+} // namepsace gascalculator
 
 #endif // UTILITIES_H_

@@ -31,7 +31,6 @@ Classes:
         - void run()
   - Calculator
       Variables:
-        - input answer
       Functions:
         - calculate(vector<input> inputs, string unit)
         - string answerType(vector<input> inputs)
