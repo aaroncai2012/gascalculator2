@@ -1,0 +1,38 @@
+These are some plans for the gas calculator:
+
+Features:
+  - Calculate the fourth variable given three
+  - Unit Conversions
+  - Request specific units for answer
+
+Potential Features:
+  - Adjust for non ideal gases
+  - Allow for pressure input to be of pressure of gas over water and temperature of water
+  - Allow user added units
+  
+Structs:
+  - signum (float value, int sigfigs)
+  - element (string name, int amount)
+  - input (signum num, string type, string unit, vector<element> formula)
+
+Classes:
+  - Interface
+      Variables:
+        - bool pressure
+        - bool mass
+        - bool volume
+        - bool temperature
+      Functions:
+        - void intro()
+        - vector<input> getInputs()
+        - input getInput()
+        - void displayAnswer(input answer)
+        - string getAnswerUnit()
+        - void run()
+  - Calculator
+      Variables:
+        - input answer
+      Functions:
+        - calculate(vector<input> inputs, string unit)
+        - string answerType(vector<input> inputs)
+        - input convert(input num, string unit)
