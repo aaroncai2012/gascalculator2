@@ -14,7 +14,8 @@ class Interface {
 public:
 
   Interface();
-  void displayAnswer(input answer);
+  void displayAnswer(input answer, std::vector<input> inputs);
+  std::vector<input> getInputs();
   void run();
 
 private:
@@ -30,7 +31,6 @@ private:
   signum getInputValue(std::string inputType, std::string inputUnit);
   input getInput();
   std::string getAnswerUnit();
-  std::vector<input> getInputs();
 
 };
 

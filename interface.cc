@@ -50,4 +50,19 @@ namespace gascalculator {
     return in;
   }
 
+  std::vector<input> Interface::getInputs() {
+    std::vector<input> in;
+    for(int i = 0; i < 3; ++i) {
+      in.emplace_back(getInput());
+    }
+    return in;
+  }
+
+  std::string Interface::getAnswerUnit() {
+    std::string answerUnit;
+    std::cout << "Which unit would you like your answer to be in?" << std::endl;
+    std::cin >> answerUnit;
+    return answerUnit;
+  }
+
 } // namespace gascalculator
