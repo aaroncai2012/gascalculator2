@@ -9,5 +9,8 @@
 
 int main() {
 
+  gascalculator::Interface io;
+  io.getInputs();
+
   return 0;
 }
