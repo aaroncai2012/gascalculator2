@@ -13,19 +13,24 @@ class Interface {
 
 public:
 
-  void intro();
-  std::vector<input> getInputs();
-  input getInput();
+  Interface();
   void displayAnswer(input answer);
-  std::string getAnswerUnit();
   void run();
 
 private:
 
   bool pressure_;
-  bool mass_;
   bool volume_;
+  bool mass_;
   bool temperature_;
+
+  void intro();
+  std::string getInputType();
+  std::string getInputUnit(std::string inputType);
+  signum getInputValue(std::string inputType, std::string inputUnit);
+  input getInput();
+  std::string getAnswerUnit();
+  std::vector<input> getInputs();
 
 };
 
