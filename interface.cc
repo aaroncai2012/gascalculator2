@@ -26,7 +26,19 @@ namespace gascalculator {
       std::cin >> type;
       std::cout << std::endl;
     }
-    return type;
+    if (type == "p") {
+      return "pressure";
+    }
+    else if (type == "v") {
+      return "volume";
+    }
+    else if (type == "m") {
+      return "mass";
+    }
+    else if (type == "t") {
+      return "temperature";
+    }
+    //return type;
   }
 
   std::string Interface::getInputUnit(std::string inputType) {
@@ -42,16 +54,16 @@ namespace gascalculator {
     std::cin >> inputValue.value;
   }
 
-  input Interface::getInput() {
-    input in;
-    in.type = getInputType();
-    in.unit = getInputUnit(in.type);
-    in.num = getInputValue(in.type, in.unit);
+  input* Interface::getInput() {
+    input* in = new input;
+    in->type = getInputType();
+    in->unit = getInputUnit(in->type);
+    in->num = getInputValue(in->type, in->unit);
     return in;
   }
 
-  std::vector<input> Interface::getInputs() {
-    std::vector<input> in;
+  std::vector<input*> Interface::getInputs() {
+    std::vector<input*> in;
     for(int i = 0; i < 3; ++i) {
       in.emplace_back(getInput());
     }

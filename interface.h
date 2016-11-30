@@ -15,10 +15,10 @@ public:
 
   Interface();
   void displayAnswer(input answer, std::vector<input> inputs);
-  std::vector<input> getInputs();
+  std::vector<input*> getInputs();
   void run();
 
-private:
+//private:
 
   bool pressure_;
   bool volume_;
@@ -29,7 +29,7 @@ private:
   std::string getInputType();
   std::string getInputUnit(std::string inputType);
   signum getInputValue(std::string inputType, std::string inputUnit);
-  input getInput();
+  input* getInput();
   std::string getAnswerUnit();
 
 };
